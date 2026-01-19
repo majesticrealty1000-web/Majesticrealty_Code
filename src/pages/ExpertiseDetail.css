@@ -1,0 +1,223 @@
+/* Expertise Detail Page Styles */
+.expertise-detail-page {
+    background-color: var(--color-dark);
+    /* Changed to dark background */
+    padding-bottom: 80px;
+    color: white;
+    /* Ensure base text color is white */
+}
+
+/* Hero Section */
+.expertise-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.expertise-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.95));
+    /* Made gradient slightly darker at bottom */
+}
+
+.expertise-hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.expertise-icon-glass {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    color: var(--color-gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    font-size: 2.5rem;
+}
+
+.expertise-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.expertise-divider {
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-gold);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Content Layout */
+.expertise-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+}
+
+@media (min-width: 1024px) {
+    .expertise-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Main Content */
+.section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    /* Changed to white */
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.expertise-description {
+    font-size: 1.1rem;
+    color: #e5e7eb;
+    /* Changed to light gray for readability on dark */
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Changed to dark semi-transparent */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle border */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-gold);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.feature-icon {
+    color: var(--color-gold);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.feature-text {
+    font-weight: 500;
+    color: #f3f4f6;
+    /* Changed to near-white */
+    line-height: 1.5;
+}
+
+/* Sidebar */
+.sidebar-wrapper {
+    position: sticky;
+    top: 100px;
+}
+
+.sidebar-cta {
+    background: rgba(255, 255, 255, 0.05);
+    /* Changed to dark */
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    /* Changed to white */
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.sidebar-text {
+    color: #d1d5db;
+    /* Changed to lighter gray */
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.btn-full {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.sidebar-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* Dark mode divider */
+    margin: 2rem 0;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #9ca3af;
+    /* Light gray */
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+
+.back-btn:hover {
+    color: white;
+    /* Hover to white */
+}
+
+@media (max-width: 768px) {
+    .expertise-title {
+        font-size: 2.5rem;
+    }
+
+    .expertise-hero {
+        height: 50vh;
+    }
+}

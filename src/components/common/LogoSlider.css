@@ -1,0 +1,121 @@
+.logo-slider-container {
+    width: 100%;
+    overflow: hidden;
+    background: white;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.logo-slider-container.black-border {
+    border: 1px solid #1a1a1a;
+    /* Dark border as requested */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Slightly enhancing shadow for depth */
+}
+
+.logo-slider-container.black-border .slider-title {
+    color: #1a1a1a;
+    /* Dark font color for home page */
+    font-weight: 700;
+    font-size: 1.25rem;
+    /* Increased size */
+}
+
+.slider-title {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-gold);
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.slider-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--color-gold);
+    margin: 10px auto 0;
+    opacity: 0.5;
+}
+
+.logo-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    gap: 4rem;
+    /* Increased gap */
+}
+
+/* Pause animation on hover */
+.logo-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    min-width: 250px;
+}
+
+.logo-slide:hover .builder-name {
+    color: #dc2626;
+    transform: scale(1.15);
+}
+
+.builder-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    font-family: var(--font-heading);
+}
+
+/* Improved Gradient Masks */
+.logo-slider-container::before,
+.logo-slider-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 120px;
+    /* Wider fade area */
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    /* Allow clicking through masks */
+}
+
+.logo-slider-container::before {
+    left: 0;
+    background: linear-gradient(to right, white 10%, transparent 100%);
+}
+
+.logo-slider-container::after {
+    right: 0;
+    background: linear-gradient(to left, white 10%, transparent 100%);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 2rem));
+        /* Adjust for gap */
+    }
+}

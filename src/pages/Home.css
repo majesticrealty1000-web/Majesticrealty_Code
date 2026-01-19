@@ -1,0 +1,200 @@
+/* Home Page Specific Styles */
+
+.home-page .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-white);
+    padding-top: 80px;
+    /* Account for navbar */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    color: var(--color-dark);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 100%;
+    line-height: 1.1;
+    margin-top: 3rem;
+    /* Added top margin for better spacing */
+}
+
+.hero-subtitle {
+    color: var(--color-gray-500);
+    max-width: 700px;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin: 0 auto 2rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-video-container {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.hero-video-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    width: 100%;
+    max-height: 550px;
+    position: relative;
+}
+
+.hero-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    /* Fallback for mobile */
+    object-fit: cover;
+}
+
+/* Home CTA Section */
+.home-cta-section {
+    background: #d4af37;
+    padding: 5rem 0;
+    color: var(--color-dark);
+}
+
+.cta-content-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cta-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.cta-heading {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    color: #0a192f;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    max-width: 500px;
+    text-align: left;
+    line-height: 1.6;
+    color: #0a192f;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-video-wrapper {
+        max-height: 300px;
+    }
+
+    .cta-flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-description {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .cta-heading {
+        text-align: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        /* Force 2 columns on mobile */
+        gap: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+        /* Stack stats on very small screens */
+    }
+
+    .trust-badges {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .badge-item {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Certifications Section */
+.certifications-section {
+    background-color: var(--color-white);
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cert-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.cert-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: var(--transition-smooth);
+    min-width: 200px;
+}
+
+.cert-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+    border-color: var(--color-gold-light);
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    color: var(--color-gold);
+}
+
+.cert-title {
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.cert-desc {
+    font-size: 0.9rem;
+    color: var(--color-gray-500);
+}
+
+/* Leadership Section */
