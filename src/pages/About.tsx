@@ -218,12 +218,10 @@ const About = () => {
                                             alt={member.name}
                                             className="team-img"
                                         />
-                                        <div className="team-overlay"></div>
                                     </div>
                                     <div className="team-info">
                                         <h3 className="team-name">{member.name}</h3>
                                         <p className="team-role">{member.role}</p>
-
                                     </div>
                                 </div>
                             </motion.div>
