@@ -58,7 +58,12 @@
     font-family: var(--font-heading);
     margin-bottom: 20px;
     line-height: 1.2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    background: var(--color-gold);
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .expertise-divider {

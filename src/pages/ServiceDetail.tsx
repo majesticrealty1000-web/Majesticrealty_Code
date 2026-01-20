@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { servicesData } from '../data/servicesData';
 import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';
 import { useEffect } from 'react';
-
-
+import './ServiceDetail.css';
 
 const ServiceDetail = () => {
     const { id } = useParams<{ id: string }>();
@@ -28,78 +27,24 @@ const ServiceDetail = () => {
     return (
         <div className="service-detail-page">
             {/* Hero Section */}
-            <section className="service-detail-hero" style={{
-                position: 'relative',
-                height: '60vh',
-                minHeight: '400px',
-                overflow: 'hidden',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white'
-            }}>
-                <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    backgroundImage: `url(${service.imageUrl})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    filter: 'brightness(0.3)'
-                }}></div>
+            <section className="service-detail-hero">
+                <div className="hero-overlay" style={{ backgroundImage: `url(${service.imageUrl})` }}></div>
 
-                <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
+                <div className="container hero-content">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
+                        <h1 className="service-hero-title">{service.title}</h1>
 
-                        <h1 style={{
-                            fontSize: '4rem',
-                            fontWeight: 800,
-                            marginBottom: '1rem',
-                            color: '#ffffff',
-                            textShadow: '0 4px 20px rgba(0,0,0,0.6)',
-                            letterSpacing: '-1.5px',
-                            lineHeight: '1.1'
-                        }}>{service.title}</h1>
+                        <div className="title-underline"></div>
 
-                        <div style={{
-                            width: '60px',
-                            height: '4px',
-                            background: 'var(--color-gold)',
-                            margin: '0 auto 2.5rem',
-                            borderRadius: '2px'
-                        }}></div>
-
-                        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                            <Link to="/" style={{
-                                backgroundColor: 'transparent',
-                                border: '2px solid #ffffff',
-                                color: '#ffffff',
-                                padding: '0.8rem 1.8rem',
-                                borderRadius: '50px',
-                                textDecoration: 'none',
-                                fontWeight: 600,
-                                transition: 'all 0.3s ease',
-                                display: 'inline-block'
-                            }}>
+                        <div className="hero-buttons">
+                            <Link to="/" className="btn-hero-outline">
                                 Home
                             </Link>
-                            <Link to="/services" style={{
-                                backgroundColor: 'var(--color-gold)',
-                                border: '2px solid var(--color-gold)',
-                                padding: '0.8rem 1.8rem',
-                                borderRadius: '50px',
-                                textDecoration: 'none',
-                                color: 'var(--color-dark)',
-                                fontWeight: 600,
-                                display: 'inline-block',
-                                transition: 'all 0.3s ease'
-                            }}>
+                            <Link to="/services" className="btn-hero-filled">
                                 All Services
                             </Link>
                         </div>
@@ -110,7 +55,7 @@ const ServiceDetail = () => {
             {/* Content Section */}
             <section className="section-padding">
                 <div className="container">
-                    <div className="row" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 2fr) minmax(0, 1fr)', gap: '4rem' }}>
+                    <div className="service-content-grid">
                         {/* Main Content */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -141,15 +86,7 @@ const ServiceDetail = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <div style={{
-                                backgroundColor: 'var(--color-white)',
-                                padding: '2.5rem',
-                                borderRadius: '20px',
-                                boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
-                                border: '1px solid var(--color-gray-200)',
-                                position: 'sticky',
-                                top: '100px'
-                            }}>
+                            <div className="sidebar-card">
                                 <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem' }}>Interested in this service?</h3>
                                 <p style={{ color: 'var(--color-gray-500)', marginBottom: '2rem' }}>
                                     Contact our experts today to get more information and personalized guidance.
