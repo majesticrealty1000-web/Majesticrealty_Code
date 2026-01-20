@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaHandshake, FaChartLine, FaCheckCircle, FaSearchLocation, FaFileContract, FaKey, FaUserTie, FaArrowRight, FaLinkedinIn, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaHandshake, FaChartLine, FaCheckCircle, FaSearchLocation, FaFileContract, FaKey, FaUserTie, FaArrowRight } from 'react-icons/fa';
 import kiranImg from '../assets/images/kiran ghodake.jpeg';
 import siddheshImg from '../assets/images/siddhesh sir.jpg';
 import maheshImg from '../assets/images/mahesh dudhalkar.jpg';
@@ -35,20 +35,17 @@ const About = () => {
         {
             name: "Kiran Ghodake",
             role: "Founder & CEO",
-            img: kiranImg,
-            social: { linkedin: "#", twitter: "#", email: "mailto:kiran@majesticrealty.com" }
+            img: kiranImg
         },
         {
             name: "Siddheshwar Ghodake",
             role: "Senior Property Consultant",
-            img: siddheshImg,
-            social: { linkedin: "#", twitter: "#", email: "mailto:siddhesh@majesticrealty.com" }
+            img: siddheshImg
         },
         {
             name: "Mahesh Dudhalkar",
             role: "Property Consultant",
-            img: maheshImg,
-            social: { linkedin: "#", twitter: "#", email: "mailto:mahesh@majesticrealty.com" }
+            img: maheshImg
         }
     ];
 
@@ -214,19 +211,20 @@ const About = () => {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="team-card group"
                             >
-                                <div className="team-img-wrapper">
-                                    <img
-                                        src={member.img}
-                                        alt={member.name}
-                                        className="team-img"
-                                    />
-                                </div>
-                                <h3 className="team-name">{member.name}</h3>
-                                <p className="team-role">{member.role}</p>
-                                <div className="team-social">
-                                    <a href={member.social.linkedin} className="social-link"><FaLinkedinIn /></a>
-                                    <a href={member.social.twitter} className="social-link"><FaTwitter /></a>
-                                    <a href={member.social.email} className="social-link"><FaEnvelope /></a>
+                                <div className="team-card-inner">
+                                    <div className="team-img-wrapper">
+                                        <img
+                                            src={member.img}
+                                            alt={member.name}
+                                            className="team-img"
+                                        />
+                                        <div className="team-overlay"></div>
+                                    </div>
+                                    <div className="team-info">
+                                        <h3 className="team-name">{member.name}</h3>
+                                        <p className="team-role">{member.role}</p>
+
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}
