@@ -1,19 +1,10 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { servicesData } from '../data/servicesData';
-import { FaArrowLeft, FaCheckCircle, FaBuilding, FaMap, FaHome, FaKey, FaBriefcase } from 'react-icons/fa';
-import { MdVilla, MdLayers } from 'react-icons/md';
+import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';
 import { useEffect } from 'react';
 
-const iconMap: { [key: string]: JSX.Element } = {
-    building: <FaBuilding size={40} />,
-    map: <FaMap size={40} />,
-    home: <FaHome size={40} />,
-    villa: <MdVilla size={40} />,
-    layers: <MdLayers size={40} />,
-    key: <FaKey size={40} />,
-    briefcase: <FaBriefcase size={40} />
-};
+
 
 const ServiceDetail = () => {
     const { id } = useParams<{ id: string }>();

@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { blogsData } from '../data/blogsData';
 import { Link } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa';
 import './Blogs.css';
 
 const Blogs = () => {
