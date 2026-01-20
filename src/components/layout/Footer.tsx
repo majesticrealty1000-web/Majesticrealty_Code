@@ -1,12 +1,15 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import './Footer.css';
+import logo from '../../assets/images/majestic realty circle logo.png';
+
+
 
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="container footer-container">
                 <div className="footer-col" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                    <img src="/Data/Majestic Realty Circle logo.png" alt="Majestic Realty" style={{ height: '100px', width: '100px', objectFit: 'contain', marginBottom: '1rem' }} />
+                    <img src={logo} alt="Majestic Realty" style={{ height: '100px', width: '100px', objectFit: 'contain', marginBottom: '1rem' }} />
                     <p>Turning your real estate dreams into reality with premium properties and expert guidance.</p>
                 </div>
                 <div className="footer-col">

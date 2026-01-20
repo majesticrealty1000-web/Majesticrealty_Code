@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaHandshake, FaChartLine, FaCheckCircle, FaSearchLocation, FaFileContract, FaKey, FaUserTie, FaArrowRight, FaLinkedinIn, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import kiranImg from '../assets/images/kiran ghodake.jpeg';
+import siddheshImg from '../assets/images/siddhesh sir.jpg';
+import maheshImg from '../assets/images/mahesh dudhalkar.jpg';
+import logoImg from '../assets/images/majestic realty circle logo.png';
 import './About.css';
 
 const About = () => {
@@ -31,19 +35,19 @@ const About = () => {
         {
             name: "Kiran Ghodake",
             role: "Founder & CEO",
-            img: "/Data/Kiran Ghodake.jpeg",
+            img: kiranImg,
             social: { linkedin: "#", twitter: "#", email: "mailto:kiran@majesticrealty.com" }
         },
         {
             name: "Siddheshwar Ghodake",
             role: "Senior Property Consultant",
-            img: "/Data/Siddhesh Sir.jpg",
+            img: siddheshImg,
             social: { linkedin: "#", twitter: "#", email: "mailto:siddhesh@majesticrealty.com" }
         },
         {
             name: "Mahesh Dudhalkar",
             role: "Property Consultant",
-            img: "/Data/Mahesh Dudhalkar.jpg",
+            img: maheshImg,
             social: { linkedin: "#", twitter: "#", email: "mailto:mahesh@majesticrealty.com" }
         }
     ];
@@ -78,7 +82,7 @@ const About = () => {
                         textAlign: 'left'
                     }}>
                         <motion.img
-                            src="/Data/Majestic Realty Circle logo.png"
+                            src={logoImg}
                             alt="Majestic Realty Logo"
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}

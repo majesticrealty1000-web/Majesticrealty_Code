@@ -3,6 +3,7 @@ import { FaBuilding, FaHandshake, FaChartLine, FaGavel, FaUsers, FaArrowRight, F
 import { Link } from 'react-router-dom';
 import { expertiseData } from '../data/expertiseData';
 import LogoSlider from '../components/common/LogoSlider';
+import heroBg from '../assets/images/logo_majestic realty.png';
 import './Expertise.css';
 
 const iconMap: { [key: string]: JSX.Element } = {
@@ -19,7 +20,7 @@ const Expertise = () => {
         <div className="expertise-page">
             {/* Hero Section */}
             <section className="expertise-hero" style={{
-                background: 'linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.7)), url("/Data/1223 majestic realty.png")',
+                background: `linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.7)), url("${heroBg}")`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}>

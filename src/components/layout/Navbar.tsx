@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
+import logo from '../../assets/images/majestic realty circle logo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +16,13 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
+
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container nav-container">
                 <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-                    <img src="/Data/Majestic Realty Circle logo.png" alt="Majestic Realty" style={{ height: '60px', width: '60px', objectFit: 'contain', marginRight: '12px' }} />
+                    <img src={logo} alt="Majestic Realty" style={{ height: '60px', width: '60px', objectFit: 'contain', marginRight: '12px' }} />
                     <span className="logo-text">
                         <span className="text-gold">MAJESTIC</span> <span style={{ color: '#fff' }}>REALTY</span>
                     </span>

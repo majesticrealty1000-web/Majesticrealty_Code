@@ -1,4 +1,7 @@
+import wcuImg1 from '../assets/images/why_choose_us_1.png';
+import wcuImg2 from '../assets/images/why_choose_us_2.png';
 import { motion } from 'framer-motion';
+
 import ServiceCard from '../components/ServiceCard';
 import { servicesData } from '../data/servicesData';
 import { FiHome, FiSettings, FiCheckCircle, FiDollarSign, FiArrowRight, FiShield, FiAward } from 'react-icons/fi';
@@ -190,10 +193,10 @@ const Home = () => {
                             className="why-choose-visual"
                         >
                             <div className="visual-item">
-                                <img src="/Data/why_choose_us_1.png" alt="Expert Consultation" />
+                                <img src={wcuImg1} alt="Expert Consultation" />
                             </div>
                             <div className="visual-item" style={{ marginTop: '40px' }}>
-                                <img src="/Data/why_choose_us_2.png" alt="Property Analysis" />
+                                <img src={wcuImg2} alt="Property Analysis" />
                             </div>
                             <div className="floating-icon-card">
                                 <FiHome />
