@@ -1,4 +1,4 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import './Footer.css';
 import logo from '../../assets/images/majestic realty circle logo.png';
 
@@ -31,7 +31,6 @@ const Footer = () => {
                     <h4>Follow Us</h4>
                     <div className="social-links">
                         <a href="#"><FaFacebook /></a>
-                        <a href="#"><FaTwitter /></a>
                         <a href="#"><FaInstagram /></a>
                         <a href="#"><FaLinkedin /></a>
                     </div>

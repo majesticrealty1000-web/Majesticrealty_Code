@@ -241,10 +241,23 @@ ul {
   }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 767px) {
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
+  }
+
+  .service-card-link {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+
+  .service-icon-wrapper {
+    justify-content: center;
+  }
+
+  .service-title {
+    font-size: 1.25rem;
   }
 }
 

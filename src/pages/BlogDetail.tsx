@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { blogsData } from '../data/blogsData';
-import { FaArrowLeft, FaCalendar, FaClock, FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
+import { FaArrowLeft, FaCalendar, FaClock, FaFacebookF, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 import './BlogDetail.css';
 
 const BlogDetail = () => {
@@ -72,7 +72,6 @@ const BlogDetail = () => {
                             <span className="share-title">Share this article:</span>
                             <div className="share-icons">
                                 <button className="share-btn"><FaFacebookF /></button>
-                                <button className="share-btn"><FaTwitter /></button>
                                 <button className="share-btn"><FaLinkedinIn /></button>
                                 <button className="share-btn"><FaEnvelope /></button>
                             </div>
