@@ -19,11 +19,16 @@
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 700;
     margin-bottom: 1.5rem;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     font-family: var(--font-heading);
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
     width: 100%;
+    color: #ffffff;
+}
+
+.services-hero-title span:first-child {
+    margin-right: 15px;
 }
 
 .services-hero-line {
