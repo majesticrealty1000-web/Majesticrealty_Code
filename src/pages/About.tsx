@@ -52,61 +52,25 @@ const About = () => {
     return (
         <div className="about-page">
             {/* Hero Section */}
-            <section className="page-hero" style={{
-                background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1469&auto=format&fit=crop")',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                height: '45vh',
-                minHeight: '400px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                paddingTop: '80px' // Navbar height compensation
-            }}>
+            <section className="page-hero">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     className="container"
                 >
-                    <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '3rem',
-                        flexWrap: 'wrap',
-                        textAlign: 'left'
-                    }}>
+                    <div className="hero-content-wrapper">
                         <motion.img
                             src={logoImg}
                             alt="Majestic Realty Logo"
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ duration: 1, delay: 0.2 }}
-                            style={{
-                                width: '150px',
-                                height: '150px',
-                                borderRadius: '50%',
-                                objectFit: 'cover',
-                                border: '4px solid var(--color-gold)',
-                                boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
-                            }}
+                            className="hero-logo"
                         />
-                        <div style={{ flex: '1', maxWidth: '600px' }}>
-                            <h1 style={{
-                                fontSize: '3.5rem',
-                                fontWeight: 700,
-                                marginBottom: '0.5rem',
-                                color: '#ffffff',
-                                textShadow: '0 2px 10px rgba(0,0,0,0.5)'
-                            }}>About <span className="text-gold">US</span></h1>
-                            <p style={{
-                                fontSize: '1.2rem',
-                                opacity: 0.9,
-                                textShadow: '0 1px 5px rgba(0,0,0,0.5)',
-                                margin: 0
-                            }}>Your Trusted Partner in Real Estate Excellence</p>
+                        <div className="hero-text-content">
+                            <h1 className="hero-title">About <span className="text-gold">US</span></h1>
+                            <p className="hero-subtitle">Your Trusted Partner in Real Estate Excellence</p>
                         </div>
                     </div>
                 </motion.div>
@@ -114,7 +78,7 @@ const About = () => {
 
             {/* Our Story Section */}
             <section className="section-padding bg-white">
-                <div className="container">
+                <div className="container who-we-are-container">
                     <div className="row" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', alignItems: 'center' }}>
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
